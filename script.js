@@ -1,21 +1,25 @@
-var greeting = "hello world"
-console.log(greeting)
-// EASY: Write a function that takes in an array of numbers and outputs the average of all the numbers. 
+let myName = "Winston"
+function greeting(x) {
+    console.log(x, myName)
+}
+greeting("Hello,", myName)
+// EASY: Write a function that takes in an array of numbers and outputs the average of all the numbers.
 
 
-function average(numbers2) {
+function average(numbers) {
     let sum = 0;
-    for(let i = 0; i < numbers2.length; i++) {
-        sum +=  numbers2[i];
+    for(let i = 0; i < numbers.length; i++) {
+        sum +=  numbers[i];
     }
-    return sum / numbers2.length;
+    return sum / numbers.length;
 }
 const n = [1,2,3,4,5,6];
 console.log("first function", average(n))
 
 
 
-// MEDIUM: Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand. (i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]).
+// MEDIUM: Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand. (i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]). You are given a target value to search. If found in the array return its index, otherwise return -1. You may assume no duplicate exists in the array.
+
 function search(arr, val) {
    return arr.indexOf(val)
 }
@@ -38,3 +42,10 @@ document.querySelector("#white").addEventListener("click", function makewhite ()
 
 
 //*VERY HARD: You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
+
+function denom (n) {
+    let coin = 0;
+    for(let i = 0; i < n.length; i++) {
+        coin[n]
+    }
+}
