@@ -43,9 +43,33 @@ document.querySelector("#white").addEventListener("click", function makewhite ()
 
 //*VERY HARD: You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
 
-function denom (n) {
-    let coin = 0;
-    for(let i = 0; i < n.length; i++) {
-        coin[n]
+function coinChange (coins, amount) {
+    let finalResult = findMinCount(coins, 0, 0, amount, 0, amount + 1);
+    function findMinCount(coins, i, currentSum, amount, count, result){
+    if(amount == 0){
+        return 0;
     }
+    if(currentSum > amount){
+        return result;
+    }
+    if(currentSum == amount){
+        result = Math.min(count, result)
+        return result
+    }
+    if(i <= coins.length-1){
+        count++
+        result = findMinCount(coins, i, currentSum+coins[i], amount, count, result)
+        count--
+        result = findMinCount(coins, i+1, currentSum, amount, count, result)
+
+    }
+    return result
 }
+    if(finalResult == amount){
+        return -1
+    }else{
+        return finalResult
+    }
+
+}
+console.log(coinChange[1,5,5], 11)
